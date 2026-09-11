@@ -10,6 +10,8 @@ Luôn phản hồi người dùng bằng tiếng Việt. Giữ nguyên tiếng A
 
 Môi trường phát triển chạy trong VS Code Dev Container được định nghĩa tại `.devcontainer/`. Bench nằm ở `development/frappe-bench`; app tùy chỉnh nằm trong `development/frappe-bench/apps/<app_name>`. `development/` bị repo cha bỏ qua, vì vậy mỗi app tùy chỉnh phải là một Git repository riêng.
 
+Khi thao tác Git cho app Wiki từ repo cha, luôn dùng `git -C development/frappe-bench/apps/wiki <args>`. Push thay đổi lên `origin`; chỉ dùng `upstream` để lấy thay đổi từ `frappe/wiki`.
+
 ## Quy tắc làm việc trong Dev Container
 
 Mặc định mọi lệnh `bench`, Python, Node và test app đều chạy trong terminal của devcontainer với user `frappe`, không chạy trực tiếp trên host. Thư mục làm việc trong container là `/workspace/development`; vào bench bằng:
